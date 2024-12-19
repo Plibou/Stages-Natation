@@ -5,75 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mes Liens</title>
     <style>
-        /* Règles générales */
         body {
-            margin: 0;
-            padding: 0;
             font-family: Arial, sans-serif;
             text-align: center;
+            margin: 0;
+            padding: 0;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            color: white;
-            overflow: hidden;
-            position: relative; /* Pour gérer les calques */
+            background-color: #f0f8ff;
         }
-
-        /* Image de fond floutée */
-        .background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url("https://postimg.cc/v4WKzw5J"); /* Remplacez par l'URL de votre image */
-            background-size: cover;
-            background-position: center;
-            filter: blur(10px); /* Applique le flou uniquement à l'image */
-            z-index: -1; /* Place l'image derrière tout le contenu */
-        }
-
-        /* Contenu principal */
-        .content {
-            position: relative; /* Place le contenu au-dessus de l'image */
-            z-index: 1; /* Assure que le texte et les liens restent devant */
-        }
-
         h1 {
             margin-bottom: 20px;
+            color: #333;
         }
-
         a {
             display: inline-block;
             margin: 10px 0;
             padding: 10px 20px;
             text-decoration: none;
             color: white;
-            background-color: rgba(0, 120, 212, 0.8);
+            background-color: #0078d4;
             border-radius: 5px;
             font-size: 16px;
-            transition: background-color 0.3s, transform 0.2s;
+            transition: background-color 0.3s;
         }
-
         a:hover {
-            background-color: rgba(0, 86, 166, 0.8);
-            transform: scale(1.05); /* Effet zoom au survol */
+            background-color: #0056a6;
         }
     </style>
 </head>
 <body>
-    <!-- Image floutée en arrière-plan -->
-    <div class="background"></div>
-
-    <!-- Contenu principal (titre et liens) -->
-    <div class="content">
-        <h1>Choisissez un lien</h1>
-        <a href="https://lien1.com" target="_blank">Lien 1</a>
-        <a href="https://lien2.com" target="_blank">Lien 2</a>
-        <a href="https://lien3.com" target="_blank">Lien 3</a>
-        <a href="https://lien4.com" target="_blank">Lien 4</a>
-    </div>
+    <h1>Choisissez un lien</h1>
+    <h1> Vous pouvez trouver les differents stages de février et avril sur les liens ci dessous :) </h1>
+    <a href="https://assonatationsartrouville.assoconnect.com/collect/description/496986-g-17-02-2025-au-21-02-2025-stage-natation-multisport" target="_blank">17-02 au 21/02 laser game + cité </a>
+    <a href="https://assonatationsartrouville.assoconnect.com/collect/description/511463-g-24-02-2025-au-28-02-2025-stage-natation-multisport" target="_blank">24/02 au 28/02 escalade, gym + cité </a>
+    <a href="https://lien3.com" target="_blank">14/04 au 18/04 TESDTTTTTTTTTTTTTTTTT </a>
+    <a href="https://impot.gouv">L'argent de greg </a>
 </body>
 </html>
