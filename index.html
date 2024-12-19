@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mes Liens</title>
     <style>
+        /* Règles générales */
         body {
             margin: 0;
             padding: 0;
@@ -16,13 +17,12 @@
             align-items: center;
             height: 100vh;
             color: white;
-            position: relative;
             overflow: hidden;
+            position: relative; /* Pour gérer les calques */
         }
 
         /* Image de fond floutée */
-        body::before {
-            content: "";
+        .background {
             position: absolute;
             top: 0;
             left: 0;
@@ -31,13 +31,18 @@
             background-image: url("https://postimg.cc/v4WKzw5J"); /* Remplacez par l'URL de votre image */
             background-size: cover;
             background-position: center;
-            filter: blur(10px); /* Floutage de l'image */
+            filter: blur(10px); /* Applique le flou uniquement à l'image */
             z-index: -1; /* Place l'image derrière tout le contenu */
+        }
+
+        /* Contenu principal */
+        .content {
+            position: relative; /* Place le contenu au-dessus de l'image */
+            z-index: 1; /* Assure que le texte et les liens restent devant */
         }
 
         h1 {
             margin-bottom: 20px;
-            z-index: 1; /* Assure que le texte reste au-dessus de l'image */
         }
 
         a {
@@ -50,7 +55,6 @@
             border-radius: 5px;
             font-size: 16px;
             transition: background-color 0.3s, transform 0.2s;
-            z-index: 1; /* Assure que les liens restent au-dessus de l'image */
         }
 
         a:hover {
@@ -60,10 +64,16 @@
     </style>
 </head>
 <body>
-    <h1>Choisissez un lien</h1>
-    <a href="https://lien1.com" target="_blank">Lien 1</a>
-    <a href="https://lien2.com" target="_blank">Lien 2</a>
-    <a href="https://lien3.com" target="_blank">Lien 3</a>
-    <a href="https://lien4.com" target="_blank">Lien 4</a>
+    <!-- Image floutée en arrière-plan -->
+    <div class="background"></div>
+
+    <!-- Contenu principal (titre et liens) -->
+    <div class="content">
+        <h1>Choisissez un lien</h1>
+        <a href="https://lien1.com" target="_blank">Lien 1</a>
+        <a href="https://lien2.com" target="_blank">Lien 2</a>
+        <a href="https://lien3.com" target="_blank">Lien 3</a>
+        <a href="https://lien4.com" target="_blank">Lien 4</a>
+    </div>
 </body>
 </html>
